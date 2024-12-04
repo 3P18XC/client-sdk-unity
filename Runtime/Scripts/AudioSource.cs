@@ -57,14 +57,14 @@ namespace LiveKit
             var newAudioSource = request.request;
             newAudioSource.Type = AudioSourceType.AudioSourceNative;
             newAudioSource.NumChannels = DefaultChannels;
-            if(_sourceType == RtcAudioSourceType.AudioSourceMicrophone)
-            {
-                newAudioSource.SampleRate = DefaultMirophoneSampleRate;
-            }
-            else
-            {
+            // if(_sourceType == RtcAudioSourceType.AudioSourceMicrophone)
+            // {
+            //     newAudioSource.SampleRate = DefaultMirophoneSampleRate;
+            // }
+            // else
+            // {
                 newAudioSource.SampleRate = DefaultSampleRate;
-            }
+            // }
             newAudioSource.Options = request.TempResource<AudioSourceOptions>();
             newAudioSource.Options.EchoCancellation = true;
             newAudioSource.Options.AutoGainControl = true;
